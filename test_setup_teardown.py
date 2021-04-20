@@ -1,12 +1,10 @@
 #理解Pytest的框架结构setup和teardown
 import pytest
-
 #pytest中一个模块就是一个文件，setup_module可以实现整个模块中只执行一次
 def setup_module():
     print("\n￥￥￥￥setup module:整个模块中开始时只执行一次￥￥￥￥")
 def teardown_module():
     print("\n￥￥￥￥teardown module:整个模块中结束后只执行一次￥￥￥￥")
-
 #这是类外的测试用例
 def setup_function():
     print("\nsetup function:每个不在类中的用例开始前都会执行！")
@@ -16,7 +14,6 @@ def test_one():
     print("\n正在执行测试模块：test one")
 def test_two():
     print("\n正在执行测试模块：test two")
-
 #测试类
 class TestCase():
     def setup_class(self):
